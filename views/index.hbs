@@ -1,0 +1,19 @@
+{{#if username}}
+  <h1>Hello {{ username }} 💪</h1>
+{{else }}
+  <h1>Hello Desconocido 💪</h1>
+{{/if}}
+
+{{#each hobbies}}
+  <li>{{@index}} Name: {{this.name}}. Level: {{this.level}}</li>
+{{/each}}
+
+{{#if address}}
+  {{#with address}}
+    <p>{{city}}</p>
+  {{/with}}
+{{/if}}
+
+{{#unless address}}
+  <p>Dirección desconocida ⚠️</p>
+{{/unless}}
